@@ -1,8 +1,15 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Habits from "./pages/Habits";
+import Login from "./pages/Login";
+
 function App() {
   return (
-    <div >
-      Hello, World!
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Habits />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
